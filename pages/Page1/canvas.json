@@ -41,6 +41,12 @@
               "dynamicBindingPathList": [
                 {
                   "key": "tableData"
+                },
+                {
+                  "key": "derivedColumns.customColumn2.options"
+                },
+                {
+                  "key": "primaryColumns.customColumn2.options"
                 }
               ],
               "leftColumn": 2,
@@ -93,7 +99,8 @@
                 "address",
                 "createdAt",
                 "updatedAt",
-                "customColumn1"
+                "customColumn1",
+                "customColumn2"
               ],
               "dynamicPropertyPathList": [],
               "editedRows": [],
@@ -106,6 +113,9 @@
               "dynamicTriggerPathList": [
                 {
                   "key": "primaryColumns.customColumn1.menuItems.menuItem2ym2a1dxrk.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn2.onSelectChange"
                 }
               ],
               "resetButtonColor": "#B0BFCB",
@@ -224,7 +234,8 @@
                   "isDerived": false,
                   "label": "id",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "isRequired": ""
                 },
                 "status": {
                   "title": "Status",
@@ -351,6 +362,24 @@
                   "label": "updatedAt",
                   "textColor": "",
                   "dateFormat": ""
+                },
+                "customColumn2": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "customColumn2",
+                  "columnType": "select",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn2",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "options": "{{Api1.data}}",
+                  "onSelectChange": "{{JSObject1.adminRoleFun()}}"
                 }
               },
               "saveButton": "Save",
@@ -394,6 +423,24 @@
                       "isVisible": true
                     }
                   }
+                },
+                "customColumn2": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "customColumn2",
+                  "columnType": "select",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn2",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "options": "{{Api1.data}}",
+                  "onSelectChange": "{{JSObject1.adminRoleFun()}}"
                 }
               },
               "isDeprecated": false,
@@ -411,6 +458,16 @@
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Api1",
+              "name": "Api1",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Page1_Users_api",
