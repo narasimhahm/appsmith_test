@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n    adminRoleFun: () => {\n        storeValue('accessToken', undefined);\n        \n        const accessTokenObject = {\n            id: 1,\n            name: 'name',\n            email: 'email',\n            kycStatus: true,\n            role: 'admin'\n        }\n        storeValue('accessToken', accessTokenObject);\n    },\n    viewerRoleFun: async () => {\n        storeValue('accessToken', undefined);\n        \n        const accessTokenObject = {\n            id: 1,\n            name: 'name',\n            email: 'email',\n            kycStatus: true,\n            role: 'viewer'\n        }\n        storeValue('accessToken', accessTokenObject);\n    }\n}",
+    "variables": []
+  },
+  "id": "Page1_JSObject1",
+  "deleted": false,
+  "gitSyncId": "63467f48d0892a4024424c8b_6346a3e4d0892a4024424c99"
+}

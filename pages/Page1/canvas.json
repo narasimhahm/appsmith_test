@@ -41,12 +41,6 @@
               "dynamicBindingPathList": [
                 {
                   "key": "tableData"
-                },
-                {
-                  "key": "derivedColumns.customColumn1.menuColor"
-                },
-                {
-                  "key": "primaryColumns.customColumn1.menuColor"
                 }
               ],
               "leftColumn": 2,
@@ -179,7 +173,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonColor": "#03B365",
-                  "menuColor": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
+                  "menuColor": "[\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\",\"#553DE9\"]",
                   "labelColor": "#FFFFFF",
                   "menuButtonLabel": "[\"Open Menu\",\"Open Menu\",\"Open Menu\"]",
                   "menuItems": {
