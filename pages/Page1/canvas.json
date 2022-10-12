@@ -40,70 +40,16 @@
               "animateLoading": false,
               "dynamicBindingPathList": [
                 {
-                  "key": "primaryColumns.name.computedValue"
+                  "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.age.computedValue"
+                  "key": "derivedColumns.customColumn1.menuColor"
                 },
                 {
-                  "key": "primaryColumns.gender.computedValue"
-                },
-                {
-                  "key": "primaryColumns.height.computedValue"
-                },
-                {
-                  "key": "primaryColumns.col.computedValue"
-                },
-                {
-                  "key": "primaryColumns.dob.computedValue"
-                },
-                {
-                  "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
-                },
-                {
-                  "key": "boxShadow"
-                },
-                {
-                  "key": "childStylesheet.button.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.button.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.menuButton.menuColor"
-                },
-                {
-                  "key": "childStylesheet.menuButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.iconButton.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.iconButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardBorderRadius"
-                },
-                {
-                  "key": "derivedColumns.customColumn1.menuButtonLabel"
-                },
-                {
-                  "key": "primaryColumns.customColumn1.menuButtonLabel"
+                  "key": "primaryColumns.customColumn1.menuColor"
                 }
               ],
-              "leftColumn": 5,
+              "leftColumn": 2,
               "actionRow": {},
               "selectedRow": [],
               "resetButton": "Reset",
@@ -144,14 +90,18 @@
               "editedRowsData": [],
               "widgetName": "Tabulator1",
               "columnOrder": [
+                "id",
                 "name",
-                "age",
+                "status",
                 "gender",
-                "height",
-                "col",
-                "dob",
+                "avatar",
+                "email",
+                "address",
+                "createdAt",
+                "updatedAt",
                 "customColumn1"
               ],
+              "dynamicPropertyPathList": [],
               "editedRows": [],
               "displayName": "Tabulator",
               "bottomRow": 35,
@@ -168,11 +118,11 @@
               "primaryColumns": {
                 "name": {
                   "index": 0,
-                  "width": 350,
+                  "width": 150,
                   "id": "name",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "select",
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
@@ -184,30 +134,14 @@
                   "title": "name",
                   "headerFilter": true,
                   "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
-                },
-                "age": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "age",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "age",
-                  "field": "age",
-                  "title": "age",
-                  "headerFilter": true,
-                  "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.age))}}"
+                  "computedValue": "[\"Billy Bob\",\"Jenny Jane\",\"Steve McAlistaire\"]",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "textColor": "",
+                  "dateFormat": ""
                 },
                 "gender": {
-                  "index": 2,
+                  "index": 0,
                   "width": 150,
                   "id": "gender",
                   "horizontalAlignment": "LEFT",
@@ -224,70 +158,14 @@
                   "title": "gender",
                   "headerFilter": true,
                   "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.gender))}}"
-                },
-                "height": {
-                  "index": 3,
-                  "width": 150,
-                  "id": "height",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "height",
-                  "field": "height",
-                  "title": "height",
-                  "headerFilter": true,
-                  "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.height))}}"
-                },
-                "col": {
-                  "index": 4,
-                  "width": 150,
-                  "id": "col",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "col",
-                  "field": "col",
-                  "title": "col",
-                  "headerFilter": true,
-                  "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.col))}}"
-                },
-                "dob": {
-                  "index": 5,
-                  "width": 150,
-                  "id": "dob",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "date",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "dob",
-                  "field": "dob",
-                  "title": "dob",
-                  "headerFilter": true,
-                  "sorter": "string",
-                  "computedValue": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( currentRow.dob))}}"
+                  "computedValue": "[\"male\",\"female\",\"male\"]",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "textColor": "",
+                  "dateFormat": ""
                 },
                 "customColumn1": {
-                  "index": 6,
+                  "index": 0,
                   "width": 150,
                   "id": "customColumn1",
                   "columnType": "menuButton",
@@ -301,9 +179,9 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonColor": "#03B365",
-                  "menuColor": "#03B365",
+                  "menuColor": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
                   "labelColor": "#FFFFFF",
-                  "menuButtonLabel": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                  "menuButtonLabel": "[\"Open Menu\",\"Open Menu\",\"Open Menu\"]",
                   "menuItems": {
                     "menuItem2ym2a1dxrk": {
                       "id": "menuItem2ym2a1dxrk",
@@ -322,7 +200,163 @@
                       "isDisabled": false,
                       "isVisible": true
                     }
-                  }
+                  },
+                  "title": "customColumn1",
+                  "field": "customColumn1",
+                  "headerFilter": true,
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "PARAGRAPH",
+                  "iconName": "add",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "id": {
+                  "title": "Id",
+                  "field": "id",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "status": {
+                  "title": "Status",
+                  "field": "status",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "status",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "status",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "avatar": {
+                  "title": "Avatar",
+                  "field": "avatar",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "email": {
+                  "title": "Email",
+                  "field": "email",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "address": {
+                  "title": "Address",
+                  "field": "address",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "address",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "address",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "createdAt": {
+                  "title": "Created At",
+                  "field": "createdAt",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "createdAt",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "createdAt",
+                  "textColor": "",
+                  "dateFormat": ""
+                },
+                "updatedAt": {
+                  "title": "Updated At",
+                  "field": "updatedAt",
+                  "tooltip": true,
+                  "headerTooltip": true,
+                  "index": 0,
+                  "width": 150,
+                  "id": "updatedAt",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": false,
+                  "enableSort": false,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "updatedAt",
+                  "textColor": "",
+                  "dateFormat": ""
                 }
               },
               "saveButton": "Save",
@@ -344,7 +378,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonColor": "#03B365",
-                  "menuColor": "#03B365",
+                  "menuColor": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( appsmith.theme.colors.primaryColor))}}",
                   "labelColor": "#FFFFFF",
                   "menuButtonLabel": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
                   "menuItems": {
@@ -369,34 +403,9 @@
                 }
               },
               "isDeprecated": false,
-              "rightColumn": 60,
+              "rightColumn": 61,
               "widgetId": "xzpasq4y4q",
-              "tableData": [
-                {
-                  "name": "Billy Bob",
-                  "age": 12,
-                  "gender": "male",
-                  "height": 95,
-                  "col": "red",
-                  "dob": "14/05/2010"
-                },
-                {
-                  "name": "Jenny Jane",
-                  "age": 42,
-                  "gender": "female",
-                  "height": 142,
-                  "col": "blue",
-                  "dob": "30/07/1954"
-                },
-                {
-                  "name": "Steve McAlistaire",
-                  "age": 35,
-                  "gender": "male",
-                  "height": 176,
-                  "col": "green",
-                  "dob": "04/11/1982"
-                }
-              ],
+              "tableData": "{{Users_api.data.users}}",
               "label": "Data",
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -407,7 +416,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Users_api",
+              "name": "Users_api",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "validOnPageLoadActions": true,
         "id": "Page1",
         "deleted": false,
