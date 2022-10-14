@@ -224,7 +224,8 @@
                   "isDerived": false,
                   "label": "id",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "isRequired": ""
                 },
                 "status": {
                   "title": "Status",
