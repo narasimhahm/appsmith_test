@@ -16,7 +16,7 @@
     "pageId": "Page1",
     "collectionId": "Page1_JSObject1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "async () => {\n  storeValue('accessToken', undefined);\n  const accessTokenObject = {\n    id: 1,\n    name: 'name',\n    email: 'email',\n    kycStatus: true,\n    role: 'viewer'\n  };\n  storeValue('accessToken', accessTokenObject);\n}",
