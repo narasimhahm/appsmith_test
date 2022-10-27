@@ -41,12 +41,6 @@
               "dynamicBindingPathList": [
                 {
                   "key": "tableData"
-                },
-                {
-                  "key": "derivedColumns.customColumn2.options"
-                },
-                {
-                  "key": "primaryColumns.customColumn2.options"
                 }
               ],
               "leftColumn": 2,
@@ -142,7 +136,8 @@
                   "tooltip": true,
                   "headerTooltip": true,
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "gender": {
                   "index": 0,
@@ -166,7 +161,8 @@
                   "tooltip": true,
                   "headerTooltip": true,
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "customColumn1": {
                   "index": 0,
@@ -213,7 +209,8 @@
                   "textSize": "PARAGRAPH",
                   "iconName": "add",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "id": {
                   "title": "Id",
@@ -235,7 +232,8 @@
                   "label": "id",
                   "textColor": "",
                   "dateFormat": "",
-                  "isRequired": ""
+                  "isRequired": "",
+                  "cellBackground": ""
                 },
                 "status": {
                   "title": "Status",
@@ -256,7 +254,8 @@
                   "isDerived": false,
                   "label": "status",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "avatar": {
                   "title": "Avatar",
@@ -277,7 +276,8 @@
                   "isDerived": false,
                   "label": "avatar",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "email": {
                   "title": "Email",
@@ -298,7 +298,8 @@
                   "isDerived": false,
                   "label": "email",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "address": {
                   "title": "Address",
@@ -319,7 +320,8 @@
                   "isDerived": false,
                   "label": "address",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "createdAt": {
                   "title": "Created At",
@@ -340,7 +342,8 @@
                   "isDerived": false,
                   "label": "createdAt",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "updatedAt": {
                   "title": "Updated At",
@@ -361,10 +364,11 @@
                   "isDerived": false,
                   "label": "updatedAt",
                   "textColor": "",
-                  "dateFormat": ""
+                  "dateFormat": "",
+                  "cellBackground": ""
                 },
                 "customColumn2": {
-                  "index": 10,
+                  "index": 0,
                   "width": 150,
                   "id": "customColumn2",
                   "columnType": "select",
@@ -378,8 +382,17 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "labelColor": "#FFFFFF",
-                  "options": "{{Api1.data}}",
-                  "onSelectChange": "{{JSObject1.adminRoleFun()}}"
+                  "options": "[{\"label\":\"Male\",\"value\":\"M\"},{\"label\":\"Female\",\"value\":\"F\"},{\"label\":\"name\",\"value\":\"Kumar\"}]",
+                  "onSelectChange": "{{JSObject1.adminRoleFun()}}",
+                  "title": "customColumn2",
+                  "field": "customColumn2",
+                  "headerFilter": true,
+                  "textColor": "",
+                  "dateFormat": "",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "PARAGRAPH",
+                  "cellBackground": ""
                 }
               },
               "saveButton": "Save",
@@ -458,16 +471,6 @@
           ]
         },
         "layoutOnLoadActions": [
-          [
-            {
-              "id": "Page1_Api1",
-              "name": "Api1",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
           [
             {
               "id": "Page1_Users_api",
