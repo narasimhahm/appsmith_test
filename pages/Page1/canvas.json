@@ -382,7 +382,20 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "labelColor": "#FFFFFF",
-                  "options": "[{\"label\":\"Male\",\"value\":\"M\"},{\"label\":\"Female\",\"value\":\"F\"},{\"label\":\"name\",\"value\":\"Kumar\"}]",
+                  "options": [
+                    {
+                      "label": "Male",
+                      "value": "M"
+                    },
+                    {
+                      "label": "Female",
+                      "value": "F"
+                    },
+                    {
+                      "label": "name",
+                      "value": "Kumar"
+                    }
+                  ],
                   "onSelectChange": "{{JSObject1.adminRoleFun()}}",
                   "title": "customColumn2",
                   "field": "customColumn2",
