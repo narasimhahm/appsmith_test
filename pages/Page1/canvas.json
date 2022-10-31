@@ -83,6 +83,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "editedRowsData": [],
               "widgetName": "Tabulator1",
+              "newButtonEnable": true,
               "columnOrder": [
                 "id",
                 "name",
@@ -94,9 +95,14 @@
                 "createdAt",
                 "updatedAt",
                 "customColumn1",
-                "customColumn2"
+                "customColumn2",
+                "customColumn3"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.customColumn3.isDisabled"
+                }
+              ],
               "editedRows": [],
               "displayName": "Tabulator",
               "bottomRow": 35,
@@ -406,6 +412,33 @@
                   "verticalAlignment": "CENTER",
                   "textSize": "PARAGRAPH",
                   "cellBackground": ""
+                },
+                "customColumn3": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "customColumn3",
+                  "columnType": "menuButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": true,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn3",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "menuButtonLabel": "[\"Test\",\"Test\",\"Test\",\"Test\",\"Test\",\"Test\",\"Test\",\"Test\",\"Test\",\"Test\"]",
+                  "title": "customColumn3",
+                  "field": "customColumn3",
+                  "headerFilter": true,
+                  "menuColor": "",
+                  "iconName": "add",
+                  "textColor": "",
+                  "dateFormat": "",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "textSize": "PARAGRAPH"
                 }
               },
               "saveButton": "Save",
@@ -465,8 +498,25 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "labelColor": "#FFFFFF",
-                  "options": "{{Api1.data}}",
+                  "options": "[\n  {\n    \"label\": \"Male\",\n    \"value\": \"M\"\n  },\n  {\n    \"label\": \"Female\",\n    \"value\": \"F\"\n  },\n  {\n    \"label\": \"name\",\n    \"value\": \"Kumar\"\n  }\n]",
                   "onSelectChange": "{{JSObject1.adminRoleFun()}}"
+                },
+                "customColumn3": {
+                  "index": 11,
+                  "width": 150,
+                  "id": "customColumn3",
+                  "columnType": "menuButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": "true",
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "customColumn3",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "labelColor": "#FFFFFF",
+                  "menuButtonLabel": "{{Tabulator1.sanitizedTableData.map((currentRow) => ( 'Test'))}}"
                 }
               },
               "isDeprecated": false,
