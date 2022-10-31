@@ -396,7 +396,7 @@
                       "value": "Kumar"
                     }
                   ],
-                  "onSelectChange": "{{JSObject1.adminRoleFun()}}",
+                  "onSelectChange": "{{showAlert('Select type opened','success')}}",
                   "title": "customColumn2",
                   "field": "customColumn2",
                   "headerFilter": true,
@@ -480,6 +480,47 @@
               "newButton": "New",
               "cellBackground": "#FFFFFF",
               "editedRowIndex": -1
+            },
+            {
+              "widgetName": "Checkbox1",
+              "displayName": "Checkbox",
+              "iconSVG": "/formbuilderui/static/media/icon.aaab032b43383e4fa53ffc0ef40c90ef.svg",
+              "searchTags": [
+                "boolean"
+              ],
+              "topRow": 41,
+              "bottomRow": 45,
+              "parentRowSpace": 10,
+              "type": "CHECKBOX_WIDGET",
+              "alignWidget": "LEFT",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 9.953125,
+              "leftColumn": 14,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelPosition": "Left",
+              "isDisabled": false,
+              "key": "jsktgki77z",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 21,
+              "widgetId": "xljq2p99dp",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "label": "Label",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "defaultCheckedState": true
             }
           ]
         },
